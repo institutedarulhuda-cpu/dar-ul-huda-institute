@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DAR-UL-HUDA COACHING CENTER</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Amiri&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+  font-family:'Poppins',sans-serif;
+  background:linear-gradient(180deg,#f4f8f6,#eef5f1);
+  color:#333;
+}
+header{
+  background:linear-gradient(135deg,#0f5132,#1fa36b);
+  color:#fff;
+  text-align:center;
+  padding:70px 20px;
+  position:relative;
+}
+header::after{
+  content:"☪";
+  position:absolute;
+  font-size:160px;
+  opacity:.06;
+  bottom:-20px;
+  right:-10px;
+}
+header h1{font-size:38px}
+header h2{font-family:'Amiri',serif;font-size:30px}
+header p{margin-top:8px}
+
+section{padding:60px 20px;max-width:1100px;margin:auto}
+.section-title{text-align:center;margin-bottom:35px}
+.section-title h2{color:#0f5132;font-size:30px}
+.section-title span{font-family:'Amiri',serif;color:#1fa36b}
+
+.cards{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:25px;
+}
+.card{
+  background:#fff;
+  padding:28px;
+  border-radius:18px;
+  box-shadow:0 12px 30px rgba(0,0,0,.08);
+}
+
+ul{list-style:none}
+ul li{margin:6px 0}
+ul li::before{content:"✔ ";color:#1fa36b;font-weight:bold}
+
+.form-box{
+  background:#fff;
+  padding:35px;
+  border-radius:22px;
+  box-shadow:0 15px 40px rgba(0,0,0,.12);
+  max-width:850px;
+  margin:auto;
+}
+input,select{
+  width:100%;
+  padding:12px 14px;
+  margin-bottom:14px;
+  border-radius:12px;
+  border:1px solid #ccc;
+}
+button{
+  width:100%;
+  padding:14px;
+  border:none;
+  border-radius:14px;
+  background:linear-gradient(135deg,#198754,#1fa36b);
+  color:#fff;
+  font-size:16px;
+}
+button:disabled{opacity:.5}
+
+#qrBox{
+  display:none;
+  text-align:center;
+  margin:20px 0;
+  padding:20px;
+  background:#eaf7f1;
+  border-radius:16px;
+}
+#feeText{font-weight:600;color:#0f5132;margin-bottom:10px}
+
+footer{
+  background:linear-gradient(135deg,#198754,#1fa36b);
+  color:#fff;
+  padding:30px 15px;
+  text-align:center;
+  line-height:1.8;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>DAR-UL-HUDA COACHING CENTER</h1>
+<h2>دارُ الهُدىٰ</h2>
+<p>Online & Offline Classes Available</p>
+</header>
+
+<section>
+<div class="section-title"><h2>📚 <span>Classes Offered</span></h2></div>
+<div class="cards">
+<div class="card"><h3>Academic</h3><p>Class 5 to Class 12</p></div>
+<div class="card"><h3>Science Special</h3><p>Class 5 to 8</p></div>
+</div>
+</section>
+
+<section>
+<div class="section-title"><h2>📖 <span>Subjects</span></h2></div>
+<div class="cards">
+<div class="card">
+<ul>
+<li>Arabic</li>
+<li>Islamic Theology</li>
+<li>Islamic Studies</li>
+<li>Islamic History</li>
+<li>English</li>
+<li>Bengali</li>
+</ul>
+</div>
+</div>
+</section>
+
+<section>
+<div class="section-title"><h2>👨‍🏫 <span>Teacher</span></h2></div>
+<div class="cards">
+<div class="card">
+<h3>MD Jahir Uddin Khan</h3>
+<p>B.A (Hons)</p>
+<p>B.Ed</p>
+</div>
+</div>
+</section>
+
+<section>
+<div class="section-title"><h2>⭐ <span>Why Choose Us</span></h2></div>
+<div class="cards">
+<div class="card">
+<ul>
+<li>Experienced Teachers</li>
+<li>Small Batch System</li>
+<li>Individual Care</li>
+<li>Morning & Evening Classes</li>
+<li>Weekly 3 Days Classes</li>
+</ul>
+</div>
+</div>
+</section>
+
+<section>
+<div class="section-title"><h2>📝 <span>Online Admission</span></h2></div>
+
+<div class="form-box">
+<form id="admissionForm">
+
+<input id="name" placeholder="Student Name" required>
+
+<!-- ✅ FIXED DOB INPUT -->
+<input type="tel" id="dob" placeholder="Date of Birth (DD-MM-YYYY)" maxlength="10" required>
+
+<input id="age" placeholder="Age (Auto Calculated)" readonly>
+
+<input id="village" placeholder="Village" required>
+<input id="po" placeholder="P.O" required>
+<input id="ps" placeholder="P.S" required>
+<input id="district" placeholder="District" required>
+<input id="state" placeholder="State" required>
+<input id="pin" placeholder="PIN Code" pattern="[0-9]{6}" required>
+
+<select id="course" required>
+<option value="">Select Course</option>
+<option value="Class 5–8 Without Science|300">Class 5–8 Without Science – ₹300</option>
+<option value="Class 5–8 With Science|400">Class 5–8 With Science – ₹400</option>
+<option value="Class 9–10|500">Class 9–10 – ₹500</option>
+<option value="Class 11–12|600">Class 11–12 – ₹600</option>
+<option value="Spoken Arabic|400">Spoken Arabic – ₹400</option>
+<option value="Tajweed Quran|400">Tajweed Quran – ₹400</option>
+</select>
+
+<div id="qrBox">
+<div id="feeText"></div>
+<img id="qrImg" width="200"><br><br>
+<label><input type="checkbox" id="paidConfirm"> I have completed the payment</label>
+</div>
+
+<select id="payment" disabled required>
+<option value="">Payment Method</option>
+<option>Google Pay</option>
+<option>PhonePe</option>
+<option>Paytm</option>
+</select>
+
+<input type="file" id="proof" accept="image/*,.pdf" disabled required>
+
+<button id="submitBtn" disabled>Submit Admission</button>
+
+</form>
+</div>
+</section>
+
+<footer>
+📍 Furfura Sharif (Near Dada Hujur Mazar Sharif)<br>
+Jangipara, Hooghly – 712706<br>
+West Bengal
+</footer>
+
+<script>
+const g=id=>document.getElementById(id);
+const course=g("course"),qrBox=g("qrBox"),qrImg=g("qrImg"),
+feeText=g("feeText"),paidConfirm=g("paidConfirm"),
+payment=g("payment"),proof=g("proof"),submitBtn=g("submitBtn"),
+dob=g("dob"),age=g("age");
+
+/* ✅ DOB AUTO FORMAT + AGE */
+dob.addEventListener("input",()=>{
+ let v=dob.value.replace(/[^0-9]/g,"");
+ if(v.length>2)v=v.slice(0,2)+"-"+v.slice(2);
+ if(v.length>5)v=v.slice(0,5)+"-"+v.slice(5,9);
+ dob.value=v;
+
+ if(v.length!==10){age.value="";return;}
+
+ const[d,m,y]=v.split("-").map(Number);
+ if(d>31||m>12||y<1900){age.value="";return;}
+
+ const birth=new Date(y,m-1,d),today=new Date();
+ if(birth>today){
+  alert("Invalid Date of Birth");
+  dob.value="";age.value="";return;
+ }
+
+ let a=today.getFullYear()-birth.getFullYear();
+ if(today.getMonth()<birth.getMonth()||
+ (today.getMonth()==birth.getMonth()&&today.getDate()<birth.getDate())) a--;
+ age.value=a+" years";
+});
+
+/* Course QR */
+course.onchange=()=>{
+ qrBox.style.display="none";
+ paidConfirm.checked=false;
+ payment.disabled=true;
+ proof.disabled=true;
+ submitBtn.disabled=true;
+ if(!course.value)return;
+ const[c,f]=course.value.split("|");
+ feeText.innerText=`Course: ${c} | Fee: ₹${f}`;
+ qrImg.src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data="+
+ encodeURIComponent(`upi://pay?pa=7001256392@upi&pn=Dar-ul-Huda&am=${f}&cu=INR`);
+ qrBox.style.display="block";
+};
+
+paidConfirm.onchange=()=>{
+ payment.disabled=!paidConfirm.checked;
+ proof.disabled=!paidConfirm.checked;
+};
+
+payment.onchange=proof.onchange=()=>{
+ submitBtn.disabled=!(payment.value&&proof.files.length&&paidConfirm.checked);
+};
+
+/* Submit */
+g("admissionForm").onsubmit=e=>{
+ e.preventDefault();
+ const a=parseInt(age.value);
+ if(isNaN(a)||a<5){alert("Student age must be at least 5 years");return;}
+ const[c,f]=course.value.split("|");
+ const msg=
+`Admission Request
+Name: ${g("name").value}
+DOB: ${dob.value}
+Age: ${a}
+
+Address:
+${g("village").value}, PO-${g("po").value},
+PS-${g("ps").value},
+${g("district").value}, ${g("state").value} - ${g("pin").value}
+
+Course: ${c}
+Fee: ₹${f}
+Payment: ${payment.value}`;
+
+ ["918167094269","917001256392"].forEach(n=>{
+  window.open("https://wa.me/"+n+"?text="+encodeURIComponent(msg),"_blank");
+ });
+};
+</script>
+
+</body>
+</html>
